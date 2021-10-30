@@ -1,0 +1,185 @@
+/* 
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* color: #fff; */
+}
+
+.card {
+    width: 110rem;
+    height: 44.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    border-radius: .8rem;
+}
+
+.card-contents {
+    display: flex;
+    flex: 1 1 50.9%;
+}
+
+h1 {
+    width: 40.3rem;
+    height: 8.8rem;
+    position: absolute;
+    top: 15.92%;
+    left: 6.55%;
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 4.4rem;
+}
+
+p {
+    width: 37.4rem;
+    height: 7.5rem;
+    position: absolute;
+    top: 41.25%;
+    left: 6.5%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    /* opacity: 0.75; */
+}
+
+ul {
+    position: absolute;
+    top: 74.22%;
+    left: 6.55%;
+    display: flex;
+    list-style-type: none;
+}
+
+li:first-child {
+    margin-right: 6.25rem;
+}
+
+li:nth-child(2) {
+    margin-right: 6rem;
+}
+
+li:last-child .stats-num {
+    text-transform: uppercase;
+}
+
+.stats-num {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.9rem;
+}
+
+.stats-obj {
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    line-height: 2.5rem;
+    /* opacity: .6; */
+}
+
+.card-image {
+    position: relative;
+    display: flex;
+    flex: 1 1 49.1%;
+    background: url("images/image-header-desktop.jpg") no-repeat center top/cover;
+    border-radius: 0 .8rem .8rem 0;
+    /* object-fit: cover; */
+    /* overflow: hidden; */
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(171, 92, 219, 0.75); */
+}
+
+
+/*** MEDIA QUERY ***/
+@media(max-width: 61em) {
+
+    .card {
+        flex-direction: column-reverse;
+        width: 62%;
+        height: 78rem;
+    }
+
+    .card-contents {
+        flex: 0 0 69.23%;
+    }
+
+    .card-image {
+        flex: 1;
+        border-radius: .8rem .8rem 0 0;
+    }
+
+    h1, p, ul {
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+    }
+
+    h1 {
+        width: 35rem;
+        height: 9.6rem;
+        top: 28rem;
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+    }
+
+    p {
+        width: 35rem;
+        height: 10rem;
+        top: 39.2rem;
+    }
+
+    ul {
+        top: 53.2rem;
+        flex-direction: column;
+    }
+
+    li {
+        width: 100%;
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 2.4rem;
+    }
+}
+
+
+@media(max-width: 35em) {
+
+    .card {
+        width: 32.7rem;
+    }
+
+    h1, p {
+        width: 26.4rem;
+    }
+}
+
+/* 
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
